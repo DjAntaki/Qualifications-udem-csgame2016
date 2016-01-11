@@ -1,6 +1,4 @@
 
-
-
 ###Algorithmie
 
 1.a. Une machine doit redonner $x < 100$ sous à un client. Elle possède une quantité illimitée de pièce de 5, 10, 25. Écrivez une fonction qui calcul le change à redonner.
@@ -18,7 +16,7 @@ Par exemple, A, B, C, D sont des tâches. Ces tâches ont les dépendances suiva
 
 1. Donnez un algorithme qui planifie l'ordre d'exécution en respectant les priorités.
 
-2. On suppose maintenant $M$ lignes d'assemblages qui travail en simultané. Décrivez un algorithme qui permet de planifier de façon optimale la distribution des tâches entre chaque ligne d'assemblage. Considérez que toutes les tâches ont la même durée.
+2. On suppose maintenant $M$ lignes d'assemblages qui travaillent en simultané. Décrivez un algorithme qui permet de planifier de façon optimale la distribution des tâches entre chaque ligne d'assemblage. Considérez que toutes les tâches ont la même durée.
 
 3. Considérez maintenant que les tâches ne durent pas le même nombre de temps. Est-il possible d'élaborer un algorithme qui résoud ce problème en temps polynomial? Si oui, décrivez-le. Sinon, donnez en un qui n'est pas polynomial.
 
@@ -34,12 +32,9 @@ Par exemple, A, B, C, D sont des tâches. Ces tâches ont les dépendances suiva
 4. Définissez la classe NL. Donnez un exemple de langage NL-Complet. (points boni si il y a une preuve de NL-complétude)
 
 
-5. Réduction
-
-
 ### Circuits booléens
 
-1. Vous recevez en entrée un circuit booléen C de n entrées et possède un seul bit de sortie. Vous savez que ce circuit est borné par une profondeur de q(n). Donner une façon d'évaluer ce circuit qui utilise un espace dans O(q(n))
+Vous recevez en entrée un circuit booléen C de n entrées et possède un seul bit de sortie. Vous savez que ce circuit est borné par une profondeur de q(n). Donner une façon d'évaluer ce circuit qui utilise un espace dans O(q(n))
 
 
 ### Combinatoire :
@@ -54,14 +49,8 @@ Soit le graphe $Q_3$ de forme cubique et les sommets A et B qui situés en diago
 
 Soit $Q_4$, un hyper-cube en 4 dimensions, et les sommets indiqués dans le fichier cubes.png. Combien y a-t-il de chemin élémentaires distincts du sommet A au sommet B? de A à C? de A à B en passant par C?
 
-###Énigmes : 
-1. Le sénateur romain Biggus Dickus organise une orgie dans sa villa. Combien de gens faut-il qu'il invite pour être sur que deux invités possèdent la même date d'anniversaire? 
-2. 
-
-
-
 ###Crypto
 
-1. Alice veut parler à Bob. Ils ont une ligne de communication non-fiable. Il existe une probabilité de 0.25 que le bit qu'Alice envoi soit inversé. En utilisant la meilleure stratégie possible, quel est le nombre moyen de bits qu'Alice doit envoyer si elle veut communiquer $n$ bits choisis aléatoirement?
+Alice veut parler à Bob. Ils ont une ligne de communication non-fiable. Il existe une probabilité de 0.25 que le bit qu'Alice envoi soit inversé. En utilisant la meilleure stratégie possible, quel est le nombre moyen de bits qu'Alice doit envoyer si elle veut communiquer $n$ bits choisis aléatoirement?
 
 
