@@ -1,9 +1,9 @@
 
 ###Algorithmie
 
-1.a. Une machine doit redonner $x < 100$ sous à un client. Elle possède une quantité illimitée de pièce de 5, 10, 25. Écrivez une fonction qui calcul le change à redonner.
+1. Une machine doit redonner $x < 100$ sous à un client. Elle possède une quantité illimitée de pièce de 5, 10, 25. Écrivez une fonction qui calcul le change à redonner.
 
-1.b. Cette même machine possède désormais une quantité limitée de pièce de 5, 10 et 25 sous. Écrivez un algorithme qui prends en compte cette contrainte.
+2. Cette même machine possède désormais une quantité limitée de pièce de 5, 10 et 25 sous. Écrivez un algorithme qui prends en compte cette contrainte.
 
 
 ######La machine
