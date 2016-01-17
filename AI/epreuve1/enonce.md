@@ -36,6 +36,7 @@ Voici les détails sur les variables en entrées. 'game_info' et 'player_state' so
 - game_info.max_mine : Un entier représentant le nombre maximal de mine autorisée par joueur
 - game_info.initial_positions : Une liste de paire d'entier contenant les emplacements de départ possibles (peut être plus grande que le nombre de joueur).
 - game_info.turn : le compteur de tours
+- game_info.nb_players : le nombre de joueurs.
 - player_state.position : un tuple contenant 2 entiers indiquant la  position du tank du joueur
 - player_state.life_left : le nombre de points de vies restants au tank.
 - player_state.mine_left : le nombre de mines restantes au tank.
@@ -49,7 +50,7 @@ Voici les caractères que vous pouvez voir dans cette carte :
 - '*' : représente une balle. Il peut y avoir plus d'une balle sur un territoire
 - 'o' : représente le joueur.
 - 'x' : représente un ennemi.
-- '.' : représente une case vide.
+- '' : représente une case vide.
 
 La variable last_turn est correspond à la variable battlefield du turn précédent.
 
@@ -71,5 +72,5 @@ Vous pouvez implémenter un AI pour cette variante pour des points bonis.
 ###Appel du programme
 
 ###Champs de bataille
-Plusieurs champs de bataille très simple vous sont fournis. Il vous est possible de faire vos propres cartes pour vos entrainer.
+Plusieurs champs de bataille très simple vous sont fournis. Il vous est possible de faire vos propres cartes pour tester votre ia.
 
