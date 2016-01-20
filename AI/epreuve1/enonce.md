@@ -20,7 +20,7 @@ Pour cette épreuve d'intelligence artificielle, le participant doit écrire un pr
 Tous les tanks reçoivent l'état de la partie et puis choisissent une action à poser. L'ordre d'exécution des actions est aléatoire (ce qui fait de ce jeu de tank un jeu stochastique). Une fois toutes les actions appliquées, les balles se déplacent de 2 cases. Le jeux termine si il reste un joueur ou moins, sinon, on passe au prochain tour. 
 
 ###Configuration de la partie
-Le jeux possède certains hyper-paramètres auquel votre AI doit s'adapter. Le nombre maximum de mine que peut poser votre tank en est un. Le nombre maximum de tour que peut durer une partie en est un aussi.
+Le jeu possède certains paramètres auquel votre AI doit s'adapter. Le nombre maximum de mine que peut poser votre tank en est un. Le nombre maximum de tour que peut durer une partie en est un aussi. Bien qu'un paramètre de la partie, le nombre de vies initial sera toujours 50 lorsque vos ias seront évaluées. 
 
 ###Signature de la fonction de décision
 
@@ -30,7 +30,7 @@ La fonction qui prend une décision possède la signature suivante :
         pass
 
         
-Voici les détails sur les variables en entrées. 'game_info' et 'player_state' sont des objets avec les attributs suivants:
+Le nom de votre fonction n'importe pas. Voici les détails sur les variables en entrées. 'game_info' et 'player_state' sont des objets avec les attributs suivants:
 
 - game_info.iteration_limit : Nombre de tour maximal dans la partie
 - game_info.max_mine : Un entier représentant le nombre maximal de mine autorisée par joueur
@@ -52,25 +52,34 @@ Voici les caractères que vous pouvez voir dans cette carte :
 - 'x' : représente un ennemi.
 - '' : représente une case vide.
 
-La variable last_turn est correspond à la variable battlefield du turn précédent.
+La variable last_turn est correspond à la variable battlefield du tour précédent.
+
+###Champs de bataille
+Plusieurs champs de bataille très simple vous sont fournis. Il vous est possible de faire vos propres cartes pour tester votre ia.
 
 ###Variante
 
-Une variante avec information partielle sur l'état est disponible. Dans cette version, la signature de la fonction de décision est la même. Toutefois, chaque tank possède un champs de vision de 360 degrés mais qui peut être bloqué par un mur. Les cases dont l'état est inconnu sont marqués par le caractère '?'.
+Une variante avec information partielle sur l'état est disponible. Dans cette version, la signature de la fonction de décision est la même. Toutefois, chaque tank possède un champs de vision de 360 degrés mais qui peut être bloqué par un mur. Les cases dont l'état est inconnu sont marqués par le caractère '?'. Un mur précédemment vu est retenu pour toute la durée de la partie. Un chemin précédemment vu mais qui n'est pas présentemment dans le champ de vision du tank est marquée par ','.
 
 Vous pouvez implémenter un AI pour cette variante pour des points bonis.
+
+#Affichage
+Il est possible d'avoir une vue de la partie en cours en passant le paramètre display=True lors de l'instanciation du GameManager. Soyez conscient que la représentation imprimée ne correspond pas à ce que votre function reçoit en entrée. L'affichage contient notamment les mines ('m' pour une mine, 'M' pour plusieurs mines) ainsi que les identifiants des joueurs.
 
 ###Avertissements et conseil
 
 - Il est interdit d'utiliser une mémoire persistante. Vous devez programmer une fonction de décision, pas un programme avec un état interne.
+- Il est interdit de modifier les objects en entrée de votre fonction. Utilisez la fonction *deepcopy()* au besoin.
 - Le temps de calcul n'est pas explicitement contraint. Toutefois, un temps de calcul déraisonnable entraine une disqualification.
 
 ##Programme
 
-*Programme pas encore terminé, il sera mis sur github et vous serez contacté quand il sera fini*
+Le programme est un méchant paquet de code. Je l'ai terminé un peu à la va-vite. Veuillez me signaler tout bug rencontré.
 
-###Appel du programme
+###Instanciation et démarrage de partie.
+Vous pouvez coder votre fonction directement dans le fichier *tank.py* et puis appeler le fichier avec la commande 'python tank.py'. Un exemple d'initialisation de partie se retrouve à la fin du fichier. 
 
-###Champs de bataille
-Plusieurs champs de bataille très simple vous sont fournis. Il vous est possible de faire vos propres cartes pour tester votre ia.
+###Modification du programme
+Vous pouvez modifier ce programme à votre guise tant que ça ne change pas le déroulement du jeu. Comme mentionné précédemment, vous pouvez aussi coder vos propres cartes. Vous pouvez me transmettre vos modifications et cartes si vous voulez que je les rajoute sur le dépôt. Partager ses cartes témoigne d'un bon esprit sportif. C'est clair que je prends ça en compte lors de l'évaluation.
+
 
